@@ -13,11 +13,85 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="56dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/main_navigation" />
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/top_navigation_constraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/component_background"
+        android:elevation="0dp"
+        android:padding="8dp"
+        app:bnc_mode="spread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            app:bt_colorActive="?attr/colorPrimary"
+            app:bt_colorInactive="?android:attr/textColorPrimary"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_padding="8dp"
+            app:bt_shape="@drawable/bottom_navigation_selected"
+            app:bt_title="Home"
+            app:bt_titlePadding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nav_cart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="?attr/colorPrimary"
+            app:bt_colorInactive="?android:attr/textColorPrimary"
+            app:bt_icon="@drawable/ic_cart"
+            app:bt_padding="8dp"
+            app:bt_shape="@drawable/bottom_navigation_selected"
+            app:bt_title="Cart"
+            app:bt_titlePadding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_home"
+            app:layout_constraintEnd_toStartOf="@+id/nav_history"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nav_home"
+            app:layout_constraintTop_toTopOf="@+id/nav_home" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:bt_colorActive="?attr/colorPrimary"
+            app:bt_colorInactive="?android:attr/textColorPrimary"
+            app:bt_icon="@drawable/ic_history_transactions"
+            app:bt_padding="8dp"
+            app:bt_shape="@drawable/bottom_navigation_selected"
+            app:bt_title="History"
+            app:bt_titlePadding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nav_cart"
+            app:layout_constraintTop_toTopOf="@+id/nav_home" />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
 </androidx.constraintlayout.widget.ConstraintLayout>

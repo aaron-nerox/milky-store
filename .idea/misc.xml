@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/drawable/bottom_navigation_selected.xml" value="0.16118143459915613" />
+        <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/drawable/component_background.xml" value="0.14444444444444443" />
         <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/drawable/fragment_background.xml" value="0.14444444444444443" />
         <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/drawable/view_background.xml" value="0.14444444444444443" />
-        <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/layout/activity_main.xml" value="0.16770833333333332" />
+        <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/layout/cart_fragment.xml" value="0.13903985507246377" />
         <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/layout/history_fragment.xml" value="0.13903985507246377" />
         <entry key="..\:/AndroidProjects/Milkystore/app/src/main/res/layout/home_fragment.xml" value="0.13903985507246377" />
