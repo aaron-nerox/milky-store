@@ -1,11 +1,11 @@
-package com.nerostarx.milkystore
+package com.nerostarx.milkystore.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+import com.nerostarx.milkystore.R
 import com.nerostarx.milkystore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

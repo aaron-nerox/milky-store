@@ -1,4 +1,4 @@
-package com.nerostarx.milkystore
+package com.nerostarx.milkystore.ui.home
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.nerostarx.milkystore.R
 
 class HomeFragment : Fragment() {
 

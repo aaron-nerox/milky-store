@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.nerostarx.milkystore.HomeFragment"
+        android:name="com.nerostarx.milkystore.ui.home.HomeFragment"
         android:label="@string/home_str"
         tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/nav_cart"
-        android:name="com.nerostarx.milkystore.CartFragment"
+        android:name="com.nerostarx.milkystore.ui.cart.CartFragment"
         android:label="@string/cart_str"
         tools:layout="@layout/cart_fragment" />
     <fragment
         android:id="@+id/nav_history"
-        android:name="com.nerostarx.milkystore.HistoryFragment"
+        android:name="com.nerostarx.milkystore.ui.history.HistoryFragment"
         android:label="@string/history_str"
         tools:layout="@layout/history_fragment" />
 </navigation>
