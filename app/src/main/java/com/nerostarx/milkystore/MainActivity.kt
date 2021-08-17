@@ -2,6 +2,10 @@ package com.nerostarx.milkystore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import com.gauravk.bubblenavigation.BubbleNavigationConstraintView
 import com.nerostarx.milkystore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,5 +16,36 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val bottomNavView = binding.bottomNavView
+        val navController = findNavController(R.id.nav_host_container)
+
+        bottomNavView.setUpWithNavController(navController)
+    }
+
+    private fun BubbleNavigationConstraintView.setUpWithNavController(navController: NavController){
+        val currentDestination = navController.currentDestination?.id
+        val currentPosition = if(currentDestination == R.id.nav_home) {0}
+            else {
+                if (currentDestination == R.id.nav_cart){1}
+                else {2}
+            }
+        this.setCurrentActiveItem(currentPosition)
+        this.setNavigationChangeListener { view, position ->
+            this.setCurrentActiveItem(position)
+            when(view.id){
+                R.id.nav_home -> {
+                    navController.navigate(R.id.nav_home)
+                }
+
+                R.id.nav_cart -> {
+                    navController.navigate(R.id.nav_cart)
+                }
+
+                R.id.nav_history -> {
+                    navController.navigate(R.id.nav_history)
+                }
+            }
+        }
     }
 }

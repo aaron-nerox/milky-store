@@ -53,14 +53,14 @@
             android:layout_height="0dp"
             android:layout_marginBottom="4dp"
             app:defaultNavHost="true"
-            app:layout_constraintBottom_toTopOf="@+id/top_navigation_constraint"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/main_navigation" />
 
         <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
-            android:id="@+id/top_navigation_constraint"
+            android:id="@+id/bottom_nav_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
