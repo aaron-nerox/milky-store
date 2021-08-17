@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_home"
         android:name="com.nerostarx.milkystore.HomeFragment"
-        android:label="home_fragment"
+        android:label="@string/home_str"
         tools:layout="@layout/home_fragment" />
     <fragment
-        android:id="@+id/cartFragment"
+        android:id="@+id/nav_cart"
         android:name="com.nerostarx.milkystore.CartFragment"
-        android:label="cart_fragment"
+        android:label="@string/cart_str"
         tools:layout="@layout/cart_fragment" />
     <fragment
-        android:id="@+id/historyFragment"
+        android:id="@+id/nav_history"
         android:name="com.nerostarx.milkystore.HistoryFragment"
-        android:label="history_fragment"
+        android:label="@string/history_str"
         tools:layout="@layout/history_fragment" />
 </navigation>
