@@ -8,4 +8,77 @@
     android:background="@drawable/fragment_background"
     tools:context=".activities.OnBoardingActivity">
 
+    <Button
+        android:id="@+id/next_button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/orange_200"
+        android:elevation="0dp"
+        android:foreground="@drawable/ic_right_arrow"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/back_button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/orange_200"
+        android:elevation="0dp"
+        android:foreground="@drawable/ic_left_arrow"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboarding_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/skip_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_button" />
+
+    <Button
+        android:id="@+id/skip_button"
+        style="@style/TheX.gradientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:text="Go to main page"
+        app:icon="@drawable/ic_right_arrow"
+        app:iconGravity="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>

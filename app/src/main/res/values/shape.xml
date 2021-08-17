@@ -19,4 +19,9 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="TheX.gradientButton" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="background">@drawable/rounded_button</item>
+        <item name="android:background">@drawable/rounded_button</item>
+    </style>
 </resources>
