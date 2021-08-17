@@ -1,32 +1,25 @@
 package com.nerostarx.milkystore.ui.history
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nerostarx.milkystore.R
+import androidx.fragment.app.activityViewModels
+import com.nerostarx.milkystore.databinding.HistoryFragmentBinding
 
 class HistoryFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = HistoryFragment()
+    private val viewModel: HistoryViewModel by activityViewModels()
+    private lateinit var binding: HistoryFragmentBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?): View {
+        binding = HistoryFragmentBinding.inflate(inflater,container, false)
+        return binding.root
     }
 
-    private lateinit var viewModel: HistoryViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.history_fragment, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HistoryViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }

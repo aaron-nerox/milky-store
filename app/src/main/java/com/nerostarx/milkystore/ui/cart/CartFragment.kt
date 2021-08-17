@@ -6,27 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.nerostarx.milkystore.R
+import com.nerostarx.milkystore.databinding.CartFragmentBinding
 
 class CartFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = CartFragment()
+    private val viewModel: CartViewModel by activityViewModels()
+    private lateinit var binding: CartFragmentBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?): View {
+        binding = CartFragmentBinding.inflate(inflater,container, false)
+        return binding.root
     }
 
-    private lateinit var viewModel: CartViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.cart_fragment, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CartViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }
