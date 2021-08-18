@@ -1,5 +1,6 @@
 package com.nerostarx.milkystore.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_container)
 
         bottomNavView.setUpWithNavController(navController)
+
+        binding.accountImage.setOnClickListener {
+            val intent = Intent(this,AuthActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
