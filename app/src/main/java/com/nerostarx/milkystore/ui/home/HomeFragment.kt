@@ -9,10 +9,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2.ORIENTATION_HORIZONTAL
 import com.nerostarx.milkystore.adapters.ProductCategoriesAdapter
 import com.nerostarx.milkystore.adapters.TopPicksAdapter
 import com.nerostarx.milkystore.databinding.HomeFragmentBinding
+import kotlinx.coroutines.*
+import java.lang.Math.abs
 
 class HomeFragment : Fragment() {
 
@@ -36,7 +40,19 @@ class HomeFragment : Fragment() {
         val pager = binding.topPicksPager
         pager.adapter = TopPicksAdapter()
         pager.orientation = ORIENTATION_HORIZONTAL
-        pager.offscreenPageLimit = 3
+        pager.clipToPadding = false
+        pager.clipChildren = false
+        pager.offscreenPageLimit = 4
+
+        val transformer = CompositePageTransformer()
+        transformer.addTransformer(MarginPageTransformer(32))
+
+        transformer.addTransformer { page, position ->
+            val r = 1 - kotlin.math.abs(position)
+            page.scaleY = 0.85f + r * 0.15f
+        }
+
+        pager.setPageTransformer(transformer)
     }
 
     private fun initCategories() {

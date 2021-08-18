@@ -37,7 +37,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="46dp"/>
 
             <TextView
                 android:id="@+id/textView2"
