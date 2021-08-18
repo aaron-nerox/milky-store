@@ -15,6 +15,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/black</item>
         <item name="xViewBackground">@color/black</item>
+        <item name="fontFamily">@font/modulus</item>
 
         <item name="shapeAppearanceSmallComponent">@style/TheX.small</item>
         <item name="shapeAppearanceMediumComponent">@style/TheX.medium</item>
