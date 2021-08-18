@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
+import androidx.viewpager2.widget.ViewPager2.ORIENTATION_HORIZONTAL
 import com.nerostarx.milkystore.adapters.ProductCategoriesAdapter
+import com.nerostarx.milkystore.adapters.TopPicksAdapter
 import com.nerostarx.milkystore.databinding.HomeFragmentBinding
 
 class HomeFragment : Fragment() {
@@ -26,7 +28,15 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initTopPicks()
         initCategories()
+    }
+
+    private fun initTopPicks() {
+        val pager = binding.topPicksPager
+        pager.adapter = TopPicksAdapter()
+        pager.orientation = ORIENTATION_HORIZONTAL
+        pager.offscreenPageLimit = 3
     }
 
     private fun initCategories() {
