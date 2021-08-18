@@ -23,5 +23,6 @@
     <style name="TheX.gradientButton" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="background">@drawable/rounded_button</item>
         <item name="android:background">@drawable/rounded_button</item>
+        <item name="backgroundTint">@null</item>
     </style>
 </resources>
