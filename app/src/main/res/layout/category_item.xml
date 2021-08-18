@@ -10,17 +10,18 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/category_mage"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TheX.cornerImage"
-        app:srcCompat="@drawable/category_sample" />
+        app:srcCompat="@drawable/product_sample" />
 
     <TextView
         android:id="@+id/category_title"

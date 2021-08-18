@@ -15,6 +15,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TheX.cornerImage"
-        app:srcCompat="@drawable/category_sample"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/promo_sample" />
 </androidx.constraintlayout.widget.ConstraintLayout>

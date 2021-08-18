@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TheX.cornerImage"
-        app:srcCompat="@drawable/category_sample" />
+        app:srcCompat="@drawable/transaction" />
 
     <TextView
         android:id="@+id/textView7"
