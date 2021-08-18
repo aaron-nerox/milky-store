@@ -9,15 +9,15 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/account_image"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/TheX.roundedImage"
-        app:srcCompat="@drawable/profile_sample"
+        app:srcCompat="@drawable/account_filler"
         tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
