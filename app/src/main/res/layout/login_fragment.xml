@@ -7,22 +7,52 @@
     android:background="@drawable/fragment_background"
     tools:context=".LoginFragment">
 
-    <Button
-        android:id="@+id/button2"
-        style="@style/TheX.gradientButton"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="Sign in"
-        android:textSize="16sp"
+        android:layout_marginEnd="16dp"
+        android:text="Login to your account"
+        android:textAlignment="center"
+        android:textColor="@color/orange_500"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_input"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:padding="0dp"
+        app:boxBackgroundMode="none"
+        app:boxCollapsedPaddingTop="0dp"
+        app:counterEnabled="false"
+        app:errorEnabled="false"
+        app:helperTextEnabled="false"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:passwordToggleEnabled="false"
+        app:startIconDrawable="@drawable/ic_account">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@drawable/component_background"
+            android:hint="Email"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_input"
@@ -56,61 +86,108 @@
             android:paddingBottom="16dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_input"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
+    <Button
+        android:id="@+id/signin_button"
+        style="@style/TheX.gradientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:padding="0dp"
-        app:boxBackgroundMode="none"
-        app:boxCollapsedPaddingTop="0dp"
-        app:counterEnabled="false"
-        app:errorEnabled="false"
-        app:helperTextEnabled="false"
-        app:hintAnimationEnabled="false"
-        app:hintEnabled="false"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Sign in"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:passwordToggleEnabled="false"
-        app:startIconDrawable="@drawable/ic_account">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="@drawable/component_background"
-            android:hint="Email"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView11"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:text="Login to your account"
+        android:text="Or"
         android:textAlignment="center"
         android:textColor="@color/orange_500"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/signin_button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/register_button"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
         android:text="I don't have an account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/google_button"
+        style="@style/TheX.gradientButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:foreground="@drawable/ic_google"
+        android:foregroundGravity="center"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/facebook_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/facebook_button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/facebook_button"
+        style="@style/TheX.gradientButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#1877F2"
+        android:foreground="@drawable/ic_facebook"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/twitter_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/google_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/twitter_button"
+        style="@style/TheX.gradientButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:foreground="@drawable/ic_twitter"
+        android:foregroundGravity="center"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/facebook_button"
+        app:layout_constraintTop_toTopOf="@+id/facebook_button"
+        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
