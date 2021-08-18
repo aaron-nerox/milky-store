@@ -28,9 +28,7 @@ class CartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initRecycler()
-        binding.checkoutButton.setOnClickListener {
-
-        }
+        binding.checkoutButton.setOnClickListener {}
     }
 
     private fun initRecycler() {
