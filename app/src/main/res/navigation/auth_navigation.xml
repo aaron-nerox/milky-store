@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_login"
-        android:name="com.nerostarx.milkystore.LoginFragment"
+        android:name="com.nerostarx.milkystore.ui.login.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_register"
-        android:name="com.nerostarx.milkystore.RegisterFragment"
+        android:name="com.nerostarx.milkystore.ui.register.RegisterFragment"
         android:label="register_fragment"
         tools:layout="@layout/register_fragment" />
 </navigation>

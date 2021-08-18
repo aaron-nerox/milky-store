@@ -1,4 +1,4 @@
-package com.nerostarx.milkystore
+package com.nerostarx.milkystore.ui.register
 
 import androidx.lifecycle.ViewModel
 
